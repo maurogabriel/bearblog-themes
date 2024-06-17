@@ -1,0 +1,257 @@
+/*DEFAULT NEW MAURO V1*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --width: 720px;
+    --font-main: 'Noto Sans Display', Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #000;
+    --link-color: #0070F3;
+    --visited-color:  #0366D6;
+    --code-background-color: #F6F8FA;
+    --code-color: #222;
+    --code-border-color: #E5E7EB;
+    --blockquote-background-color: #F6F8FA;
+    --blockquote-color: #111;
+    --mark-background-color: #79FFE1; 
+    --mark-color: #0C4047; 
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #000000;
+        --heading-color: #eee;
+        --text-color: #fff;
+        --link-color: #3291FF;
+        --visited-color:  #0070F3;
+        --code-background-color: #111;
+        --code-color: #eee;
+        --code-border-color: #222222;
+        --blockquote-background-color: #111;
+        --blockquote-color: #F6F8FA;
+        --mark-background-color: #7928CA; 
+        --mark-color: #fff;
+    }
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+nav a {
+    margin-right: 5px;
+    padding: 5px;
+    background-color: var(--mark-background-color);
+    color:var(--mark-color);
+  	font-size: 1em;
+}
+
+nav p {
+    margin: 14px 0;
+}
+
+strong, b {
+    color: var(--heading-color);
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+time {
+ 	font-family: monospace;
+  	font-style: normal;
+  	font-size: 15px;
+	display: none;
+}
+
+main {
+    line-height: 1.6;
+}
+
+/* Tables */
+
+table {
+	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+th {
+	border: 1px solid var(--code-border-color);
+	text-align: left;
+	padding: .5rem;
+}
+
+th {
+	background: var(--code-background-color);
+}
+
+tr:nth-child(even) {
+	/* Set every other cell slightly darker. Improves readability. */
+	background: var(--code-background-color);
+}
+
+table caption {
+	font-weight: bold;
+	margin-bottom: .5rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--code-border-color);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+blockquote {
+    border-left: 5px solid var(--code-border-color);
+  	background-color: var(--blockquote-background-color);
+    color: var(--blockquote-color);
+    padding: 5px 0 5px 20px;
+    font-style: italic;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer a {
+    margin-right: 5px;
+    padding: 5px;
+    background-color: var(--mark-background-color);
+    color:var(--mark-color);
+  	font-size: 1em;
+  	font-weight: bold;
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title h1 {
+    font-size: 2em;
+  	margin: 0;
+	width: fit-content;
+	background-color: #ccc;
+	padding: 0 10px;
+	background-color: var(--mark-background-color);
+  	color:var(--mark-color);  
+}
+
+
+.inline {
+    width: auto !important;
+}
+
+.highlight, .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border: 1px solid var(--code-border-color);
+    border-radius: 5px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+/* blog post list 
+ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+}
+
+ul.blog-posts li {
+    display: flex;
+}
+
+ul.blog-posts li span {
+    flex: 0 0 130px;
+}
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+*/
+
+/* Utils*/
+iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%; /* change this to a fixed width, or create a container with a width. */
+  height: 100%;
+  border-radius: 5px;
+}
+
+mark {
+  padding: 3px;
+  background-color: var(--mark-background-color);
+  color:var(--mark-color);
+}
+
+.tags a {
+  padding: 3px;
+  background-color: var(--mark-background-color);
+  color:var(--mark-color);
+  line-height: 2.1em;
+}
+
+kbd, code {
+	/* The main preformatted style. This is changed slightly across different cases. */
+	background: var(--code-background-color);
+	border: 1px solid var(--code-border-color);
+	border-radius: 5px;
+	padding: 3px 6px;
+	/* ↓ font-size is relative to containing element, so it scales for titles*/
+	font-size: 0.9em;
+}
+
+kbd {
+	/* Makes the kbd element look like a keyboard key */
+	border-bottom: 3px solid var(--code-border-color);
+}
+
+/* DT DD*/
+
+dt {
+	font-weight: bold;
+}
+
+dd::before {
+	/* Add an arrow to data table definitions */
+	content: '→ ';
+}
